@@ -1,9 +1,11 @@
-import './App.css';
+import './css/App.css';
+import {Board} from './components/Board';
+import './components/Piece';
 
 function App() {
   return (
     <div className="App">
-      <h1>Chess</h1>
+      <Board />
     </div>
   );
 }
