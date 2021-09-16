@@ -1,16 +1,20 @@
 import { Piece } from "./Piece";
-import "../css/square.css";
+import styles from "../css/square.module.css";
 
 interface SquareProps {
-    color: string,
-    pieceColor: string,
-    piece: string
+    color: string;
+    pieceColor: string;
+    piece: string;
 }
 
-export function Square(props: SquareProps) {
+export const Square = (props: SquareProps) => {
     return (
-        <div className={`square ${props.color}`}>
+        <div
+            className={`${styles.square} ${
+                props.color === "black" ? styles.black : styles.white
+            }`}
+        >
             <Piece color={props.pieceColor} piece={props.piece} />
         </div>
     );
-}
+};
