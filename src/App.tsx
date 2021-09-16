@@ -1,11 +1,11 @@
-import './App.css';
+import "./css/App.css";
+import { Board } from "./components/Board";
+import "./components/Piece";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Chess</h1>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => {
+    return (
+        <div className="App">
+            <Board />
+        </div>
+    );
+};
