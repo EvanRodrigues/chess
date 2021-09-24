@@ -4,7 +4,7 @@ import "./components/Piece";
 
 export const App = () => {
     return (
-        <div className="App">
+        <div>
             <Board />
         </div>
     );

@@ -1,4 +1,4 @@
-#board {
+.board {
     width: 80rem;
     height: 80rem;
     display: flex;

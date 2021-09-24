@@ -84,9 +84,9 @@ export const Board = () => {
         setSquares(board);
     }, []);
 
-    if (!squares) return <></>;
+    if (!squares) return null;
     return (
-        <div id={styles.board}>
+        <div className={styles.board}>
             {squares.map((boardRow: Array<SquareInterface>, row: number) => {
                 return boardRow.map((square: SquareInterface, col: number) => {
                     return (
