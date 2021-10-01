@@ -1,11 +1,7 @@
 import "./css/App.css";
-import { Board } from "./components/Board";
 import "./components/Piece";
+import { ChessInterface } from "./components/ChessInterface";
 
 export const App = () => {
-    return (
-        <div>
-            <Board />
-        </div>
-    );
+    return <ChessInterface />;
 };

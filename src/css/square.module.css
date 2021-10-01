@@ -6,10 +6,10 @@
     align-items: center;
 }
 
-.square.black {
+.black {
     background-color: #b58863;
 }
 
-.square.white {
+.white {
     background-color: #f0d9b5;
 }
