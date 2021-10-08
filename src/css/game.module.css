@@ -1,9 +1,21 @@
 .movesContainer {
-    padding: 0.5rem;
-    width: 20vw;
+    background-color: #fcf3e8;
+    width: 20rem;
     max-height: 80rem;
-    overflow-y: auto;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+.moves {
     font-size: 1.5rem;
+    max-height: 77rem;
+    overflow-y: auto;
+    padding-left: 0.5rem;
 }
 
 .moveContainer {
@@ -12,7 +24,7 @@
 
 .move {
     font-size: 1.5rem;
-    margin: 0 0.4rem;
+    margin: 0 0.5rem;
 }
 
 .outcome {

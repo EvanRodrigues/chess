@@ -64,9 +64,16 @@ export const MovesInput = (props: MovesInputProps) => {
     };
 
     return (
-        <form onSubmit={submitMoves}>
-            <textarea className={styles.movesInput} onChange={updateInput} />
-            <input type="submit" />
-        </form>
+        <div className={styles.movesInputContainer}>
+            <h1>Enter Your Moves</h1>
+            <form onSubmit={submitMoves}>
+                <textarea
+                    className={styles.movesInput}
+                    onChange={updateInput}
+                    placeholder="Insert Chess Notation"
+                />
+                <input className={styles.submit} type="submit" />
+            </form>
+        </div>
     );
 };

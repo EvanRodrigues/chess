@@ -20,20 +20,25 @@ export const GameInfo = () => {
         return <MovesInput game={game} setGame={setGame} />;
     return (
         <div className={styles.movesContainer}>
-            {game.moves.map((move: Move, i) => {
-                return (
-                    <div className={styles.moveContainer} key={i}>
-                        <span key={`number${i}`}>{move.number}</span>
-                        <button className={styles.move} key={`white${i}`}>
-                            {move.white}
-                        </button>
-                        <button className={styles.move} key={`black${i}`}>
-                            {move.black}
-                        </button>
-                    </div>
-                );
-            })}
-            <span className={styles.outcome}>{game.outcome}</span>
+            <div className={styles.headerContainer}>
+                <h1>This Game's Moves</h1>
+            </div>
+            <div className={styles.moves}>
+                {game.moves.map((move: Move, i) => {
+                    return (
+                        <div className={styles.moveContainer} key={i}>
+                            <span key={`number${i}`}>{move.number}</span>
+                            <button className={styles.move} key={`white${i}`}>
+                                {move.white}
+                            </button>
+                            <button className={styles.move} key={`black${i}`}>
+                                {move.black}
+                            </button>
+                        </div>
+                    );
+                })}
+                <span className={styles.outcome}>{game.outcome}</span>
+            </div>
         </div>
     );
 };
