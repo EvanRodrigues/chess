@@ -13,10 +13,7 @@ export const Piece = (props: PieceProps) => {
 
     return (
         <i
-            className={cx({
-                piece: true,
-                fas: true,
-                [`fa-chess-${props.piece}`]: true,
+            className={cx("piece", "fas", `fa-chess-${props.piece}`, {
                 white: props.color === "white",
                 black: props.color === "black",
             })}

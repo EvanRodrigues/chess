@@ -14,10 +14,12 @@ interface Game {
 }
 
 export const GameInfo = () => {
-    const [game, setGame] = useState({} as Game);
+    const [game, setGame] = useState<Game>({
+        moves: [],
+        outcome: "",
+    });
 
-    if (!Object.keys(game).length)
-        return <MovesInput game={game} setGame={setGame} />;
+    if (!game.moves.length) return <MovesInput game={game} setGame={setGame} />;
     return (
         <div className={styles.movesContainer}>
             <div className={styles.headerContainer}>

@@ -49,17 +49,17 @@ export const MovesInput = (props: MovesInputProps) => {
                         number: move,
                         white: array[i + 1],
                         black: array[i + 2],
-                    } as Move;
+                    };
                 })
                 .filter((move, i) => i % 3 === 0),
             outcome: outcome,
-        } as Game;
+        };
     };
 
     const submitMoves = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const separatedMoves: Game = separateMoves(movesInput);
+        const separatedMoves = separateMoves(movesInput);
         updateGame(separatedMoves);
     };
 

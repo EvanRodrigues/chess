@@ -13,8 +13,7 @@ let cx = classNames.bind(styles);
 export const Square = (props: SquareProps) => {
     return (
         <div
-            className={cx({
-                square: true,
+            className={cx("square", {
                 black: props.color === "black",
                 white: props.color === "white",
             })}
